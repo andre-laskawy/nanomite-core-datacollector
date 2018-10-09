@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <Import Project="Version.csproj.include" />
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <Configurations>Debug;Release</Configurations>
+    <AssemblyVersion>$(Version)</AssemblyVersion>
+    <FileVersion>$(Version)</FileVersion>
+    <Version>$(VersionSemantic)</Version>
+  </PropertyGroup>
+
+  <Import Project="SourceLink.csproj.include" />
+
+  <ItemGroup>
+    <PackageReference Include="Nanomite.Core.DataAccess" Version="1.0.0" />
+    <PackageReference Include="Nanomite.Core.Network" Version="1.0.23" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,15 @@
+<!-- Ensure that debugging of the resulting NuGet packages work (we're using SourceLink). -->
+<Project>
+
+  <ItemGroup Label="dotnet pack instructions">
+    <Content Include="$(OutputPath)\$(PackageId).pdb">
+      <Pack>true</Pack>
+      <PackagePath>lib/$(TargetFramework)</PackagePath>
+    </Content>
+    <Content Include="$(OutputPath)\*.dll">
+      <Pack>true</Pack>
+      <PackagePath>lib/$(TargetFramework)</PackagePath>
+    </Content>
+  </ItemGroup>
+
+</Project>
